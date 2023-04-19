@@ -70,7 +70,6 @@ let createDoc = async() =>{
 createDoc(); 
 
 
-console.log("--------------------------------------------")
 let readData = async()=>{
     try{
         let data = await Playlist.find() ; 
@@ -82,7 +81,17 @@ let readData = async()=>{
 }
 readData(); 
 
+let read2Data = async()=>{
+    console.log("hi")
+    try{
+        let data = await Playlist.find({"name"  : "express js"}) ; 
+        console.log(data)
 
-// now you have to learn differnet operators on database
-// 
-// 
+    }catch(error){
+        console.log(error)
+    }
+}
+read2Data(); 
+
+// commit
+
